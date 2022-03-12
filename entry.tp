@@ -1,0 +1,55 @@
+{
+  "sdk": 3,
+  "version": 100,
+  "name": "Git Utils",
+  "id": "GitUtilsPlugin",
+  "plugin_start_cmd": "python %TP_PLUGIN_FOLDER%GitUtilsPlugin\\plugin.py",
+  "categories": [
+    {
+      "id": "Main",
+      "name": "Git Utils",
+      "actions": [
+        {
+          "id": "OpenGitBash",
+          "name": "Abrir Git Bash",
+          "prefix": "plugin",
+          "type": "communicate",
+          "tryInline": true,
+          "format": "Abrir git {$CONFIG_DIR$}",
+          "data": [
+            {
+              "id": "CONFIG_DIR",
+              "type": "text",
+              "label": "text",
+              "default": "Hello World"
+            }
+          ]
+        },
+        {
+          "id": "ExampleGitAnywhere",
+          "name": "Abrir Git Anywhere",
+          "prefix": "plugin",
+          "type": "communicate",
+          "tryInline": true,
+          "format": "Abrir git Anywhere",
+          "data": [
+            {
+              "id": "ExampleTextData",
+              "type": "text",
+              "label": "text",
+              "default": "Hello World"
+            }
+          ]
+        }
+      ],
+      "states": [
+        {
+          "id": "ExampleState",
+          "type": "text",
+          "desc": "Example State",
+          "default": "None"
+        }
+      ]
+    }
+  ]
+}
